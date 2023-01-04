@@ -22,17 +22,13 @@ def parse_string(a_string):
     return words
 
 
-def display_words(words):
-    # DisplayWords function
-    # Accepts a list of words and displays them, one per line
-    for word in words:
-        print(word)
-
-
 def main():
+    # user interface
+    print("This program will ask the user for a sentence and then")
+    print("display each word, without spaces, one per line. \n")
+
     # Ask user to enter a sentence
-    user_input = input("Enter a sentence: ")
-    print()
+    user_input = input("Enter a string: ")
 
     # Catch any invalid input
     if len(user_input) == 0:
@@ -42,8 +38,10 @@ def main():
     # Call function to parse the string and return a list of words
     words = parse_string(user_input)
 
-    # Call function to display the words, one per line
-    display_words(words)
+    # display words
+    print("The words in your sentence, without spaces, are:")
+    for word in words:
+        print(word)
 
 
 if __name__ == "__main__":
